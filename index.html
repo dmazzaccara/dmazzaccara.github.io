@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +72,7 @@
         }
         .main-content {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 3fr 1fr; /* Changed from 2fr 1fr to 3fr 1fr for better balance */
             gap: 40px;
             margin: 40px 0;
         }
@@ -82,11 +83,14 @@
             width: 100%;
             border-radius: 5px;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
         .profile-image img {
-            width: 100%;
+            width: 80%; /* Reduced from 100% to make it smaller */
             height: auto;
             display: block;
+            max-width: 300px; /* Adding a max-width for control */
         }
         h1 {
             font-size: 2.5rem;
@@ -137,7 +141,7 @@
         /* Publication items styling */
         .publication-item {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 3fr 1fr; /* Changed from 2fr 1fr to 3fr 1fr to match profile image proportion */
             gap: 40px;
             margin-bottom: 40px;
             border-bottom: 1px solid #eee;
@@ -146,16 +150,19 @@
         .publication-content {
             display: flex;
             flex-direction: column;
+            padding-right: 20px; /* Added padding to better align with profile image width */
         }
         .publication-image {
             max-width: 100%;
             height: auto;
             display: flex;
             align-items: center;
+            justify-content: flex-start; /* Align to start for better alignment with profile */
+            width: 100%; /* Ensure full width */
         }
         .publication-image img {
             width: 100%;
-            max-width: 250px;
+            max-width: 220px; /* Reduced from 250px to better match profile image */
             height: auto;
             border: 1px solid #eee;
             border-radius: 4px;
