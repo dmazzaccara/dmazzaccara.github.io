@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Davide Mazzaccara - Computational Linguistics/NLP</title>
+    <title>Davide Mazzaccara - Computational Linguistics/NLP</title>
     <style>
         body.dark-mode {
             background-color: #1a1a1a;
@@ -28,7 +28,10 @@
         body.dark-mode .pub-link:hover {
             background-color: #9370DB;
             color: #1a1a1a;
-        }    
+        }
+        body.dark-mode h3 {
+            color: #ffffff;
+        }
         body {
             font-family: Utah Condensed Bold, Times, 'Times New Roman', serif;
             line-height: 1.6;
@@ -134,8 +137,8 @@
         /* Publication items styling */
         .publication-item {
             display: grid;
-            grid-template-columns: 2fr 1fr; /* Change this ratio to match the main-content ratio */
-            gap: 40px; /* Match the gap from main-content */
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
             margin-bottom: 40px;
             border-bottom: 1px solid #eee;
             padding-bottom: 25px;
@@ -148,7 +151,15 @@
             max-width: 100%;
             height: auto;
             display: flex;
-            justify-content: flex-end; 
+            align-items: center;
+        }
+        .publication-image img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            object-fit: contain;
         }
         .authors {
             font-style: italic;
@@ -188,12 +199,8 @@
                 grid-template-columns: 1fr;
             }
             .publication-image {
-                max-width: 100%;
-                height: auto;
-                display: flex;
-                justify-content: flex-end;
+                order: -1;
             }
-
         }
     </style>
 </head>
@@ -215,21 +222,19 @@
     <div class="container">
         <div class="main-content">
             <div class="profile-content">
-                <h1> Davide Mazzaccara <span class="name-color"> </span></h1>
+                <h1>Davide <span class="name-color">Mazzaccara</span></h1>
 
                 <div class="section">
                     <p>I am a PhD Student in Computational Linguistics/Natural Language Processing at <a href="https://www.cimec.unitn.it/en" target="_blank">CIMeC</a>, University of Trento, supervised by <a href="https://disi.unitn.it/~bernardi/" target="_blank">Raffaella Bernardi</a>. I previously studied Linguistics at the University of Pavia, as a student of the Collegio Borromeo. Currently, I am working on reasoning with language models and language games. My research interests include natural language understanding, multilingual NLP, computational semantics and pragmatics.</p>
-
                 </div>
+
                 <div class="section" id="news">
                     <h2>News</h2>
                     
                     <div class="news-item">
                         <div class="date">March, 2025</div>
                         <div>
-                            <p>New <a href="https://arxiv.org/abs/2504.08590">preprint</a> on LLMs learning through language games! </p>
-                        </div>
-                    </div>
+                            <p>New <a href="https://arxiv.org/abs/2504.08590">preprint</a> on LLMs learning through language games!</p>
                         </div>
                     </div>
                 </div>
@@ -247,21 +252,21 @@
                             </div>
                         </div>
                         <div class="publication-image">
-                            <img src="" alt="Zero-Shot Tokenizer Transfer">
+                            <img src="images/playpen.png" alt="Playpen Environment">
                         </div>
                     </div>
                     
                     <div class="publication-item">
                         <div class="publication-content">
                             <h3>Boosting Questions' Effectiveness in Medical Interviews</h3>
-                            <p>Questions are a fundamental tool for acquiring information, from children’s learning to complex tasks. Recent work has shown...</p>
+                            <p>Questions are a fundamental tool for acquiring information, from children's learning to complex tasks. Recent work has shown...</p>
                             <p class="authors">Davide Mazzaccara, Alberto Testoni, Raffaella Bernardi</p>
                             <div class="publication-links">
                                 <a href="https://www.semdial.org/anthology/papers/Z/Z24/Z24-4018/" class="pub-link">pdf</a>
                             </div>
                         </div>
                         <div class="publication-image">
-                            <img src="/api/placeholder/350/200" alt="Dynamic Memory Compression">
+                            <img src="images/medical.png" alt="Medical Interviews">
                         </div>
                     </div>
                     
@@ -282,8 +287,8 @@
                     
                     <div class="publication-item">
                         <div class="publication-content">
-                            <h3>ChatGPT’s Information Seeking Strategy: Insights from the 20-Questions Game</h3>
-                            <p> Large Language Models, and ChatGPT in particular, have recently grabbed the attention of the community and the media. Having reached...</p>
+                            <h3>ChatGPT's Information Seeking Strategy: Insights from the 20-Questions Game</h3>
+                            <p>Large Language Models, and ChatGPT in particular, have recently grabbed the attention of the community and the media. Having reached...</p>
                             <p class="authors">Leonardo Bertolazzi, Davide Mazzaccara, Filippo Merlo, Raffaella Bernardi</p>
                             <div class="publication-links">
                                 <a href="https://aclanthology.org/2023.inlg-main.11/" class="pub-link">pdf</a>
@@ -291,22 +296,21 @@
                             </div>
                         </div>
                         <div class="publication-image">
-                            <img src="/api/placeholder/350/200" alt="Scaling Sparse Fine-Tuning">
+                            <img src="images/chatgpt.png" alt="ChatGPT 20Q">
                         </div>
                     </div>
                 </div>
-                
             </div>
 
             <div class="profile-image">
-                <img src="/dmazzaccara.github.io/images/me.JPG" alt="Your Name Mazzaccara">
+                <img src="images/me.JPG" alt="Davide Mazzaccara">
             </div>
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <p>Davide Mazzaccara 2025.</p>
+            <p>© Davide Mazzaccara 2025.</p>
         </div>
     </footer>
 
