@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Computational Linguistics/NLP</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+        }
+        .name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+        }
+        .name-color {
+            color: blueviolet;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        .profile-content {
+            padding-right: 20px;
+        }
+        .profile-image {
+            width: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        h3 {
+            color: #000;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        .affiliations {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        a {
+            color: blueviolet;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .news-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .date {
+            font-weight: bold;
+        }
+        footer {
+            border-top: 1px solid #eee;
+            padding: 20px 0;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .toggle-theme {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        /* Publication items styling */
+        .publication-item {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 25px;
+        }
+        .publication-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .publication-image {
+            max-width: 100%;
+        }
+        .publication-image img {
+            width: 100%;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        .authors {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .publication-links {
+            margin-top: auto;
+        }
+        .pub-link {
+            display: inline-block;
+            border: 1px solid blueviolet;
+            padding: 4px 15px;
+            border-radius: 3px;
+            margin-right: 10px;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        .pub-link:hover {
+            background-color: blueviolet;
+            color: white;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .profile-content {
+                padding-right: 0;
+            }
+            .profile-image {
+                width: 60%;
+                margin: 0 auto;
+            }
+            .publication-item {
+                grid-template-columns: 1fr;
+            }
+            .publication-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <p class="name">Your Name <span class="name-color">Mazzaccara</span></p>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#research">Research</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#projects">Projects</a>
+                    <a href="https://github.com/dmazzaccara" target="_blank">GitHub</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#cv">CV</a>
+                    <button class="toggle-theme">🌙</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="profile-content">
+                <h1>Your Name <span class="name-color">Mazzaccara</span></h1>
+                <div class="affiliations">
+                    Affiliations: Department of Computational Linguistics, University Name
+                </div>
+
+                <div class="section">
+                    <p>I am a PhD Researcher in Computational Linguistics/Natural Language Processing at the <a href="#">University Name</a> interested in [specific research topics, e.g., language models, multilingual processing, semantic parsing]. My research focuses on developing novel approaches to understand and model human language using computational methods and deep learning techniques.</p>
+
+                    <p>My academic journey started with a [Your Background Degree] from [Previous University]. Currently, I am working in the <a href="#">NLP Research Group</a> at [Your Current University], where I investigate [specific aspect of your research, e.g., cross-lingual transfer learning, low-resource language processing, etc.].</p>
+
+                    <p>My research interests include natural language understanding, multilingual NLP, computational semantics, and machine learning applications for linguistics.</p>
+
+                    <p>I am also an open-source contributor. My projects can be found on <a href="https://github.com/dmazzaccara" target="_blank">GitHub</a>.</p>
+                </div>
+
+                <div class="section" id="publications">
+                    <h2>Publications</h2>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <h3>Zero-Shot Tokenizer Transfer</h3>
+                            <p>Language models (LMs) are bound to their tokenizer, which maps raw text to a sequence of vocabulary items (tokens). This restricts...</p>
+                            <p class="authors">Your Name Mazzaccara, [Co-author 1], [Co-author 2]</p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link">pdf</a>
+                                <a href="#" class="pub-link">code</a>
+                            </div>
+                        </div>
+                        <div class="publication-image">
+                            <img src="/api/placeholder/350/200" alt="Zero-Shot Tokenizer Transfer">
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <h3>Dynamic Memory Compression: Retrofitting LLMs for Accelerated Inference</h3>
+                            <p>Transformers have emerged as the backbone of large language models (LLMs). However, generation remains inefficient due to the need to...</p>
+                            <p class="authors">Your Name Mazzaccara, [Co-author 1], [Co-author 2], [Co-author 3]</p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link">pdf</a>
+                            </div>
+                        </div>
+                        <div class="publication-image">
+                            <img src="/api/placeholder/350/200" alt="Dynamic Memory Compression">
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <h3>Scaling Sparse Fine-Tuning to Large Language Models</h3>
+                            <p>Large Language Models (LLMs) are difficult to fully fine-tune (e.g., with instructions or human feedback) due to their sheer number of...</p>
+                            <p class="authors">Your Name Mazzaccara, [Co-author 1], [Co-author 2], [Co-author 3]</p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link">pdf</a>
+                                <a href="#" class="pub-link">code</a>
+                            </div>
+                        </div>
+                        <div class="publication-image">
+                            <img src="/api/placeholder/350/200" alt="Scaling Sparse Fine-Tuning">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="news">
+                    <h2>News</h2>
+                    
+                    <div class="news-item">
+                        <div class="date">Month, 2024</div>
+                        <div>
+                            <p>I will be presenting our latest research at [Conference Name]!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="news-item">
+                        <div class="date">Month, 2023</div>
+                        <div>
+                            <p>Started a new collaboration with researchers at [Institution] on [Topic].</p>
+                        </div>
+                    </div>
+                    
+                    <div class="news-item">
+                        <div class="date">Month, 2022</div>
+                        <div>
+                            <p>This website has gone live!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-image">
+                <img src="/api/placeholder/400/500" alt="Your Name Mazzaccara">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© Copyright 2025 Your Name Mazzaccara.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple dark/light mode toggle
+        const themeToggle = document.querySelector('.toggle-theme');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
