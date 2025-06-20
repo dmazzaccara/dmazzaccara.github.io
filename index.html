@@ -186,6 +186,7 @@
         }
         .publication-item {
             display: grid;
+            grid-template-columns: 1fr;
             gap: 40px;
             margin-bottom: 40px;
             border-bottom: 1px solid #eee;
@@ -194,9 +195,6 @@
         }
         .publication-item.has-image {
             grid-template-columns: 2fr 1fr;
-        }
-        .publication-item.no-image {
-            grid-template-columns: 1fr;
         }
         .publication-content {
             display: flex;
@@ -332,7 +330,7 @@
                 <div class="section" id="publications">
                     <h2>Publications</h2>
                     
-                    <div class="publication-item">
+                    <div class="publication-item has-image">
                         <div class="publication-content">
                             <h3>Playpen: An Environment for Exploring Learning Through Conversational Interaction</h3>
                             <p>Are we running out of learning signal? Predicting the next word in an existing text has turned out to be a powerful signal, at least at scale....</p>
@@ -354,7 +352,7 @@
                         </div>
                     </div>
                     
-                    <div class="publication-item">
+                    <div class="publication-item has-image">
                         <div class="publication-content">
                             <h3>Learning to Ask Informative Questions: Enhancing LLMs with Preference Optimization and Expected Information Gain</h3>
                             <p>Questions are essential tools for acquiring the necessary information to complete information-seeking tasks. However...</p>
