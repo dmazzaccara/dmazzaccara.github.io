@@ -50,6 +50,7 @@
             margin: 0;
             padding: 0;
             color: #333;
+            font-size: 18px;
         }
         .container {
             max-width: 1200px;
@@ -154,7 +155,7 @@
             text-decoration: underline;
         }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         .news-item {
             display: grid;
@@ -186,15 +187,16 @@
         }
         .publication-item {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 40px;
             margin-bottom: 40px;
             border-bottom: 1px solid #eee;
             padding-bottom: 25px;
             width: 100%;
         }
-        .publication-item.has-image {
-            grid-template-columns: 2fr 1fr;
+        .publication-item.no-image {
+            grid-template-columns: 1fr;
+            gap: 0;
         }
         .publication-content {
             display: flex;
@@ -330,7 +332,7 @@
                 <div class="section" id="publications">
                     <h2>Publications</h2>
                     
-                    <div class="publication-item has-image">
+                    <div class="publication-item no-image">
                         <div class="publication-content">
                             <h3>Playpen: An Environment for Exploring Learning Through Conversational Interaction</h3>
                             <p>Are we running out of learning signal? Predicting the next word in an existing text has turned out to be a powerful signal, at least at scale....</p>
@@ -341,7 +343,7 @@
                         </div>
                     </div>
                     
-                    <div class="publication-item">
+                    <div class="publication-item no-image">
                         <div class="publication-content">
                             <h3>Boosting Questions' Effectiveness in Medical Interviews</h3>
                             <p>Questions are a fundamental tool for acquiring information, from children's learning to complex tasks. Recent work has shown...</p>
@@ -352,7 +354,7 @@
                         </div>
                     </div>
                     
-                    <div class="publication-item has-image">
+                    <div class="publication-item">
                         <div class="publication-content">
                             <h3>Learning to Ask Informative Questions: Enhancing LLMs with Preference Optimization and Expected Information Gain</h3>
                             <p>Questions are essential tools for acquiring the necessary information to complete information-seeking tasks. However...</p>
