@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davide Mazzaccara - Computational Linguistics/NLP</title>
+    <style>
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        } 
+        body.dark-mode header {
+            border-bottom-color: #333;
+        } 
+        body.dark-mode footer {
+            border-top-color: #333;
+        }
+        body.dark-mode .nav-links a {
+            color: #f0f0f0;
+        }
+        body.dark-mode .publication-item {
+            border-bottom-color: #333;
+        }        
+        body.dark-mode .pub-link {
+            border-color: #9370DB;
+            color: #9370DB;
+        }
+        body.dark-mode .pub-link:hover {
+            background-color: #9370DB;
+            color: #1a1a1a;
+        }
+        body.dark-mode h3 {
+            color: #ffffff;
+        }
+        body {
+            font-family: Utah Condensed Bold, Times, 'Times New Roman', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+        }
+        .name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+        }
+        .name-color {
+            color: blueviolet;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        .profile-content {
+            padding-right: 20px;
+        }
+        .profile-sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            text-align: center;
+        }
+        .social-links a {
+            color: blueviolet;
+            text-decoration: none;
+            padding: 5px 0;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        h3 {
+            color: #000;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        .affiliations {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        a {
+            color: blueviolet;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .news-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .date {
+            font-weight: bold;
+        }
+        footer {
+            border-top: 1px solid #eee;
+            padding: 20px 0;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .toggle-theme {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        /* Publication items styling - now full width */
+        .publications-full-width {
+            grid-column: 1 / -1;
+            margin-top: 20px;
+        }
+        .publication-item {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 25px;
+            width: 100%;
+        }
+        .publication-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .publication-image {
+            max-width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+        }
+        .publication-image img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            object-fit: contain;
+        }
+        .authors {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .publication-links {
+            margin-top: auto;
+        }
+        .pub-link {
+            display: inline-block;
+            border: 1px solid blueviolet;
+            padding: 4px 15px;
+            border-radius: 3px;
+            margin-right: 10px;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        .pub-link:hover {
+            background-color: blueviolet;
+            color: white;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .profile-content {
+                padding-right: 0;
+                order: 2;
+            }
+            .profile-sidebar {
+                order: 1;
+                margin-bottom: 30px;
+            }
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+            .publication-item {
+                grid-template-columns: 1fr;
+            }
+            .publication-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="https://scholar.google.com/citations?user=AvG04EgAAAAJ&hl=it&oi=ao">Publications</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#cv">CV</a>
+                    <button class="toggle-theme">🦇</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="profile-content">
+                <h1>Davide <span class="name-color">Mazzaccara</span></h1>
+
+                <div class="section">
+                    <p>I am a PhD Student in Computational Linguistics/Natural Language Processing at <a href="https://www.cimec.unitn.it/en" target="_blank">CIMeC</a>, University of Trento, supervised by <a href="https://disi.unitn.it/~bernardi/" target="_blank">Raffaella Bernardi</a>. In the <a href="https://www.cimec.unitn.it/en/257/language-and-vision-lavi" target="_blank">LaVI</a> group, I am working on reasoning with language models and language games. I previously studied Linguistics at the University of Pavia, as a student of the Collegio Borromeo. My research interests include instruction following and pragmatics, computational semantics and interpretability.</p>
+                </div>
+
+                <div class="section" id="news">
+                    <h2>News</h2>
+                    
+                    <div class="news-item">
+                        <div class="date">March, 2025</div>
+                        <div>
+                            <p>New <a href="https://arxiv.org/abs/2504.08590">preprint</a> on LLMs learning through language games!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-sidebar">
+                <div class="profile-image">
+                    <img src="images/me.JPG" alt="Davide Mazzaccara">
+                </div>
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?user=AvG04EgAAAAJ&hl=it&oi=ao">Google Scholar</a>
+                    <a href="https://github.com/dmazzaccara">GitHub</a>
+                    <a href="mailto:davide.mazzaccara@unitn.it">Email</a>
+                    <a href="https://twitter.com/your_handle">Twitter</a>
+                    <a href="https://linkedin.com/in/your_profile">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="publications-full-width">
+                <div class="section" id="publications">
+                    <h2>Publications</h2>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <h3>Playpen: An Environment for Exploring Learning Through Conversational Interaction</h3>
+                            <p>Are we running out of learning signal? Predicting the next word in an existing text has turned out to be a powerful signal, at least at scale....</p>
+                            <p class="authors">Nicola Horst, Davide Mazzaccara, Antonia Schmidt, Michael Sullivan, Filippo Momentè, Luca Franceschetti, Philipp Sadler, Sherzod Hakimov, Alberto Testoni, Raffaella Bernardi, Raquel Fernández, Alexander Koller, Oliver Lemon, David Schlangen, Mario Giulianelli, Alessandro Suglia</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/abs/2504.08590" class="pub-link">pdf</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <h3>Boosting Questions' Effectiveness in Medical Interviews</h3>
+                            <p>Questions are a fundamental tool for acquiring information, from children's learning to complex tasks. Recent work has shown...</p>
+                            <p class="authors">Davide Mazzaccara, Alberto Testoni, Raffaella Bernardi</p>
+                            <div class="publication-links">
+                                <a href="https://www.semdial.org/anthology/papers/Z/Z24/Z24-4018/" class="pub-link">pdf</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <h3>Learning to Ask Informative Questions: Enhancing LLMs with Preference Optimization and Expected Information Gain</h3>
+                            <p>Questions are essential tools for acquiring the necessary information to complete information-seeking tasks. However...</p>
+                            <p class="authors">Davide Mazzaccara, Alberto Testoni, Raffaella Bernardi</p>
+                            <div class="publication-links">
+                                <a href="https://aclanthology.org/2024.findings-emnlp.291/" class="pub-link">pdf</a>
+                                <a href="https://github.com/dmazzaccara/LearningToAsk" class="pub-link">code</a>
+                            </div>
+                        </div>
+                        <div class="publication-image">
+                            <img src="images/img_ISS.png" alt="EIG paper">
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <h3>ChatGPT's Information Seeking Strategy: Insights from the 20-Questions Game</h3>
+                            <p>Large Language Models, and ChatGPT in particular, have recently grabbed the attention of the community and the media. Having reached...</p>
+                            <p class="authors">Leonardo Bertolazzi, Davide Mazzaccara, Filippo Merlo, Raffaella Bernardi</p>
+                            <div class="publication-links">
+                                <a href="https://aclanthology.org/2023.inlg-main.11/" class="pub-link">pdf</a>
+                                <a href="https://github.com/leobertolazzi/20q-chatgpt" class="pub-link">code</a>
+                            </div>
+                        </div>
+                        <div class="publication-image">
+                            <img src="images/schema-fig1.png" alt="ChatGPT 20Q">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© Davide Mazzaccara 2025.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple dark/light mode toggle
+        const themeToggle = document.querySelector('.toggle-theme');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🦎' : '🦇';
+        });
+    </script>
+</body>
+</html>
